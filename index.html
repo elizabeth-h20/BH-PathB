@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript</title>
+	<title>Tip Calc</title>
 </head>
-<input type="text" id="textStuff">
-<button onclick="doStuff(document.getElementById('textStuff'). value)">
-<p id="putHere"></p>
+<body>
+
+<p>How much was the bill?</p>
+<p><input type="text" id="bill"></p>
+<p><button onclick="calcTip(document.getElementById('bill').value)">Calculate 70% Tip</button></p>
+<p id="total"></p>
+
 <script>
-function doStuff(textStuff){
-	document.getElementById('putHere').innerHTML=textStuff;
-}
+function calcTip(bill){
+	var totalBill = bill * 1.7
+	document.getElementById('total').innerHTML = totalBill
+}	
+
 </script>
+
 </body>
 </html>
